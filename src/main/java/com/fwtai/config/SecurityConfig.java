@@ -58,10 +58,17 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter{
         //.failureUrl("/failure")//登录失败的回调;它的重定向(重定向是客户端跳转)
         .failureForwardUrl("/fail")//登录失败时回调;它是服务端跳转;
         .permitAll()//表示与登录相关的都统统放行[不包含css样式及图片,包含登录页面url;登录接口url;登录失败的回调url；登录成功的回调url]
+
         .and()//此时又回到上面第1行的 'authorizeRequests()'
         .logout()//配置退出登录
         .logoutUrl("/exit")//退出登录的url,默认是get方式,若要该成post方式请用下面方式处理
         //.logoutRequestMatcher(new AntPathRequestMatcher("/exit","POST"))
+        .logoutSuccessUrl("/login.html")//退出成功的处理
+        //.logoutSuccessHandler()//可用于前后端分离处理
+        //.invalidateHttpSession(true)//是否让Session失败,默认是true
+        //.clearAuthentication(true)//清除认证登录信息,默认是true
+        .permitAll()//表示与退出相关的都统统放行
+
         .and()//此时又回到上面第1行的 'authorizeRequests()'
         .csrf()
         .disable();
