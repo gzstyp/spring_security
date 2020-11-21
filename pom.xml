@@ -11,7 +11,15 @@
 	<groupId>com.fwtai</groupId>
 	<artifactId>spring_security</artifactId>
 	<version>v1.0.0</version>
-	<description>Spring Security 应用示例代码,前后端不分离版本</description>
+
+    <description>
+        Spring Security 应用示例代码,前后端不分离版本
+        需要注意的是:
+        登录成功之后的处理
+        登录失败的处理
+        未登录认证处理方案
+        注销登录
+    </description>
 
 	<properties>
 		<java.version>1.8</java.version>
