@@ -43,6 +43,6 @@ public class HelloController{
 
     @PostMapping("/fail")
     public String fail(){
-        return "账号或密码错误,它是服务端跳转,URL路径不变,因为登录的url就是/authLogin";
+        return "账号或密码错误,它是服务端跳转,URL路径不变,因为登录的url就是/loginAuth";
     }
 }

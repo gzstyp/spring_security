@@ -44,7 +44,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter{
         .authenticated()//认证之后才能访问
         .and()//此时又回到上面第1行的 'authorizeRequests()'
         .formLogin()//表单登录
-        .loginProcessingUrl("/authLogin")
+        .loginProcessingUrl("/loginAuth")
         .usernameParameter("userName")//请求时登录账号参数名,即表单的name
         .passwordParameter("passWord")//登录密码参数名
         .loginPage("/login.html")//指定登录页面的url[若没有额外的指定的话默认的登录接口就是它,只是页面的get请求,而登录接口是post请求]
