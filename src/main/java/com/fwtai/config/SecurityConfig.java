@@ -41,7 +41,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter{
     protected void configure(final HttpSecurity http) throws Exception{
         http.authorizeRequests()//开启认证
         .anyRequest()//任何请求
-        .authenticated()//所有的都需要登录认证之后才能访问,注意配置顺序
+        .authenticated()//所有的都需要登录认证之后才能访问,注意配置顺序,它和shiro是一样的
         .and()//此时又回到上面第1行的 'authorizeRequests()'
         .formLogin()//表单登录
         .loginProcessingUrl("/loginAuth")//post请求:http://192.168.3.108:89/loginAuth
