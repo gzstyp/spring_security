@@ -39,7 +39,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter{
 
     @Override
     protected void configure(final HttpSecurity http) throws Exception{
-        http.authorizeRequests()//开启认证;
+        http.authorizeRequests()//开启认证
         .anyRequest()//任何请求
         .authenticated()//认证之后才能访问
         .and()//此时又回到上面第1行的 'authorizeRequests()'
